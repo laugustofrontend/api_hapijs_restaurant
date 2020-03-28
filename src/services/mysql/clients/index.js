@@ -1,10 +1,10 @@
-const clients = (deps) => {
+const clients = deps => {
   const { connection, errorHandler } = deps;
 
   return {
     all: () => {
       return new Promise((resolve, reject) => {
-        connection.query('SELECT * FROM clientes', (error, results) => {
+        connection.query('SELECT * FROM clientes limit 50', (error, results) => {
           if (error) {
             errorHandler(error, 'Falha ao buscar todos os clients', reject);
             return false;
@@ -13,7 +13,7 @@ const clients = (deps) => {
           return resolve({ clients: results });
         });
       });
-    },
+    }
   };
 };
 

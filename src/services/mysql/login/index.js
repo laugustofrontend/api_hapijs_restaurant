@@ -1,7 +1,20 @@
-const clients = (deps) => {
+const garcons = (deps) => {
   const { connection, errorHandler } = deps;
 
   return {
+    all: () => {
+      return new Promise((resolve, reject) => {
+        connection.query('SELECT * FROM garcon', (error, results) => {
+          if (error) {
+            errorHandler(error, 'Falha ao buscar todos os garçons', reject);
+            return false;
+          }
+
+          return resolve({ garcon: results });
+        });
+      });
+    },
+
     user: (user) => {
       const { login, password } = user;
       return new Promise((resolve, reject) => {
@@ -10,11 +23,11 @@ const clients = (deps) => {
           [login, password],
           (error, results) => {
             if (error) {
-              errorHandler(error, 'Falha ao buscar todos os clients', reject);
+              errorHandler(error, 'Falha ao selecionar o usuário', reject);
               return false;
             }
 
-            return resolve({ clients: results });
+            return resolve({ garcon: results });
           }
         );
       });
@@ -22,4 +35,4 @@ const clients = (deps) => {
   };
 };
 
-module.exports = clients;
+module.exports = garcons;

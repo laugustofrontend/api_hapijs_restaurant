@@ -6,9 +6,8 @@ const client = (server) => {
     path: '/login',
     handler: async (request) => {
       const { user } = request.payload;
-      const garcon = await db.login().user(user);
 
-      return garcon;
+      return db.login().user(user);
     },
   });
 };
