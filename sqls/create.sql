@@ -35,9 +35,6 @@ CREATE TABLE `garcon` (
   `nome` varchar(50) NOT NULL DEFAULT '',
   `apelido` varchar(30) NOT NULL DEFAULT '',
   `senha` varchar(60) NOT NULL DEFAULT '',
-  `cartao` varchar(50) NOT NULL DEFAULT '',
-  `comissao` double(10,2) NOT NULL DEFAULT '0.00',
-  `cod_interno` int(11) NOT NULL DEFAULT '0',
   `ativo` enum('true','false') DEFAULT 'true',
   PRIMARY KEY (`codigo`),
   KEY `codigo` (`codigo`)

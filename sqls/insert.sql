@@ -95,14 +95,11 @@ email,
 nome,
 apelido,
 senha,
-cartao,
-comissao,
-cod_interno,
 ativo
 )
 VALUES
-('lara@email.com','LARA','LARA','123', '', 0.00, 1,'true'),
-('juliana@email.com','JULIANA','CRIS','123', '', 0.00,2,'true');
+('lara@email.com','LARA','LARA','123', 'true'),
+('juliana@email.com','JULIANA','CRIS','123', 'true');
 
 INSERT INTO `grupos` (nome) VALUES ('BAR'), ( 'COZINHA');
 
