@@ -15,19 +15,20 @@ const garcons = (deps) => {
       });
     },
 
-    user: (user) => {
-      const { login, password } = user;
+    user: ({ email }) => {
       return new Promise((resolve, reject) => {
         connection.query(
-          'SELECT cod_interno, nome FROM garcon WHERE ativo="true" AND apelido=? AND senha=?',
-          [login, password],
+          'SELECT email, nome, apelido, senha FROM garcon WHERE ativo = "true" AND email = ?',
+          [email],
           (error, results) => {
+            const { email: eMail, nome, apelido } = results[0];
+
             if (error) {
-              errorHandler(error, 'Falha ao selecionar o usuário', reject);
+              errorHandler(error, 'Usuário não encontrado', reject);
               return false;
             }
 
-            return resolve({ garcon: results });
+            return resolve({ garcon: { nome, apelido, eMail } });
           }
         );
       });

@@ -15,6 +15,7 @@ connection.connect((error) => {
 });
 
 const errorHandler = (error, msg, rejectFunction) => {
+  console.log('errorHandler => ', error);
   rejectFunction({ error: msg });
 };
 
