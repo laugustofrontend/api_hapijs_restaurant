@@ -29,6 +29,18 @@ const garcons = (deps) => {
       });
     },
 
+    getGarcon: (email) => {
+      return new Promise((resolve, reject) => {
+        connection.query('SELECT codigo, nome, email, senha FROM garcon WHERE email = ?', [email], (err, results) => {
+          if (err) {
+            return errorHandler(err, 'Não foi possível localizar usuário', reject);
+          }
+
+          return resolve({ ...results[0] });
+        });
+      });
+    },
+
     save: (user) => {
       const { email, nome, apelido, senha, ativo } = user;
 
