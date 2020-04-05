@@ -6,6 +6,9 @@ const garcons = (server) => {
     path: '/garcons',
     options: {
       auth: 'simple',
+      description: 'Get Garçons',
+      notes: 'Returns a list of garçons',
+      tags: ['api'],
     },
     handler: async () => {
       return db.garcons().all();
@@ -17,6 +20,9 @@ const garcons = (server) => {
     path: '/garcons/{id}',
     options: {
       auth: 'simple',
+      description: 'Get Garçon',
+      notes: 'Returns a garçon of passed id for path',
+      tags: ['api'],
     },
     handler: async (request) => {
       const { id } = request.params;
@@ -30,6 +36,9 @@ const garcons = (server) => {
     path: '/garcons',
     options: {
       auth: 'simple',
+      description: 'Save Garçon',
+      notes: 'Save garçon with values of payload',
+      tags: ['api'],
     },
     handler: async (request) => {
       const user = db.garcons().save(request.payload.user);
@@ -42,6 +51,9 @@ const garcons = (server) => {
     path: '/garcons',
     options: {
       auth: 'simple',
+      description: 'Update Garçon',
+      notes: 'Update garçon with values passed of payload',
+      tags: ['api'],
     },
     handler: (request) => {
       const user = db.garcons().update(request.payload.user);
@@ -55,6 +67,9 @@ const garcons = (server) => {
     path: '/garcons',
     options: {
       auth: 'simple',
+      description: 'Delete Garçon',
+      notes: 'Delete Garçon of id passed for payload',
+      tags: ['api'],
     },
     handler: (request) => {
       const user = db.garcons().delete(request.payload.user);
