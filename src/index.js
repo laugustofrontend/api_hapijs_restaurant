@@ -16,18 +16,6 @@ const init = async () => {
   await server.register(require('@hapi/basic'));
   server.auth.strategy('simple', 'basic', { validate });
 
-  server.route({
-    method: 'GET',
-    path: '/auth',
-    options: {
-      auth: 'simple',
-    },
-    handler: (request, h) => {
-      console.log('path auth => ', h);
-      return 'welcome';
-    },
-  });
-
   routes(server);
 
   await server.start();
