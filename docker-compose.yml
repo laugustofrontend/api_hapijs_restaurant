@@ -16,8 +16,13 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
-    env_file:
-      - .env
+    environment:
+      APP_HOST: ${APP_HOST}
+      APP_PORT: ${APP_PORT}
+      DB_HOST: ${DB_HOST}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_DATABASE: ${DB_DATABASE}
 
   db:
     container_name: db_hapijs
