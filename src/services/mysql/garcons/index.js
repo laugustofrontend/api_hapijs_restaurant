@@ -6,13 +6,13 @@ const garcons = (deps) => {
   return {
     all: () => {
       return new Promise((resolve, reject) => {
-        connection.query('SELECT * FROM garcon', (error, results) => {
+        connection.query('SELECT email, nome, apelido, ativo FROM garcon', (error, results) => {
           if (error) {
             errorHandler(error, 'Falha ao buscar todos os garçons', reject);
             return false;
           }
 
-          return resolve({ garcon: results });
+          return resolve({ garcons: results });
         });
       });
     },
