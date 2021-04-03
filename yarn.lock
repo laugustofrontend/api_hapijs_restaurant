@@ -104,15 +104,15 @@
     "@hapi/boom" "9.x.x"
     "@hapi/hoek" "9.x.x"
 
-"@hapi/catbox@11.x.x":
-  version "11.1.0"
-  resolved "https://registry.yarnpkg.com/@hapi/catbox/-/catbox-11.1.0.tgz#949380c82b8f1cd1f760d67569fcd34aba54f140"
-  integrity sha512-FDEjfn26RZRyOEPeZdaAL7dRiAK5FOGuwTnTw0gxK30csAlKeOHsEnoIxnLIXx7QOS17eUaOk6+MiweWQM6Keg==
+"@hapi/catbox@^11.1.0":
+  version "11.1.1"
+  resolved "https://registry.yarnpkg.com/@hapi/catbox/-/catbox-11.1.1.tgz#d277e2d5023fd69cddb33d05b224ea03065fec0c"
+  integrity sha512-u/8HvB7dD/6X8hsZIpskSDo4yMKpHxFd7NluoylhGrL6cUfYxdQPnvUp9YU2C6F9hsyBVLGulBd9vBN1ebfXOQ==
   dependencies:
     "@hapi/boom" "9.x.x"
     "@hapi/hoek" "9.x.x"
-    "@hapi/joi" "17.x.x"
     "@hapi/podium" "4.x.x"
+    "@hapi/validate" "1.x.x"
 
 "@hapi/content@^5.0.2":
   version "5.0.2"
@@ -138,17 +138,17 @@
   resolved "https://registry.yarnpkg.com/@hapi/formula/-/formula-2.0.0.tgz#edade0619ed58c8e4f164f233cda70211e787128"
   integrity sha512-V87P8fv7PI0LH7LiVi8Lkf3x+KCO7pQozXRssAHNXXL9L1K+uyu4XypLXwxqVDKgyQai6qj3/KteNlrqDx4W5A==
 
-"@hapi/hapi@^19.1.1":
-  version "19.1.1"
-  resolved "https://registry.yarnpkg.com/@hapi/hapi/-/hapi-19.1.1.tgz#d3b73777194b2229be81dd237b23b06711a781ca"
-  integrity sha512-rpQzSs0XsHSF7usM4qdJJ0Bcmhs9stWhUW3OiamW33bw4qL8q3uEgUKB9KH8ODmluCAkkXOQ0X0Dh9t94E5VIw==
+"@hapi/hapi@^19.2.0":
+  version "19.2.0"
+  resolved "https://registry.yarnpkg.com/@hapi/hapi/-/hapi-19.2.0.tgz#a177f27d1d067f1fb23de9c0a0b4349502190a7b"
+  integrity sha512-Isf/BUPQMRMYK+xx4y2B05lrrGw6PSbJKytk1SlaXeV7tXm6m+6tFRBog6c/na0QNgojafb0bjMB+vBg64CwUA==
   dependencies:
     "@hapi/accept" "^5.0.1"
     "@hapi/ammo" "^5.0.1"
     "@hapi/boom" "9.x.x"
     "@hapi/bounce" "2.x.x"
     "@hapi/call" "8.x.x"
-    "@hapi/catbox" "11.x.x"
+    "@hapi/catbox" "^11.1.0"
     "@hapi/catbox-memory" "5.x.x"
     "@hapi/heavy" "7.x.x"
     "@hapi/hoek" "9.x.x"
@@ -309,6 +309,14 @@
   integrity sha512-tFJlT47db0kMqVm3H4nQYgn6Pwg10GTZHb1pwmSiv1K4ks6drQOtfEF5ZnPjkvC+y4/bUPHK+bc87QvLcL+WMw==
   dependencies:
     "@hapi/hoek" "^9.0.0"
+
+"@hapi/validate@1.x.x":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@hapi/validate/-/validate-1.1.3.tgz#f750a07283929e09b51aa16be34affb44e1931ad"
+  integrity sha512-/XMR0N0wjw0Twzq2pQOzPBZlDzkekGcoCtzO314BpIEsbXdYGthQUbxgkGDf4nhk1+IPDAsXqWjMohRQYO06UA==
+  dependencies:
+    "@hapi/hoek" "^9.0.0"
+    "@hapi/topo" "^5.0.0"
 
 "@hapi/vise@4.x.x":
   version "4.0.0"
