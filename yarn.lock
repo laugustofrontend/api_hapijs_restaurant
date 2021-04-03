@@ -1265,10 +1265,10 @@ handlebars@^4.5.3:
   optionalDependencies:
     uglify-js "^3.1.4"
 
-hapi-auth-jwt2@^10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/hapi-auth-jwt2/-/hapi-auth-jwt2-10.0.0.tgz#2fb9333400c483833e5155321e10a249ab6b0c51"
-  integrity sha512-Xax8xd3dz1vtVnJBrij/rAWb1lQVjlIQOkjIoj2nd0ZAGpsXWPyqCDd9HxMHVoezAjZAZ7JCwSfdDnjEnvrEmg==
+hapi-auth-jwt2@^10.2.0:
+  version "10.2.0"
+  resolved "https://registry.yarnpkg.com/hapi-auth-jwt2/-/hapi-auth-jwt2-10.2.0.tgz#213015f77b8d4e6a103cbe348b2d8e64d31d57e2"
+  integrity sha512-6Xkt0LHNBglYWOlFulNgf5pUPqRGMKpAHZjwEZqC8/07TVlgxr240pENctrthcLi8k/yCunm7x2xCSLNyTGKmg==
   dependencies:
     "@hapi/boom" "^9.0.0"
     cookie "^0.4.0"
